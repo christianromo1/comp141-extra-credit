@@ -1,0 +1,97 @@
+#!/bin/bash
+
+# Create a directory called output
+
+mkdir output
+
+
+
+# Move/copy the text file into output directory
+
+cp myfile.txt output
+
+
+
+# cd into output
+
+cd output
+
+
+
+# Read the contents of the text file into a new file called read.txt
+
+cat myfile.txt > read.txt
+
+
+
+# Save the output of pwd and ls commands to files called pwd.txt and ls.txt
+
+pwd > pwd.txt
+
+ls > ls.txt
+
+
+
+# Make a copy of the text file into a third file called copy.txt
+
+cp myfile.txt copy.txt
+
+
+
+# Create an alias to print today’s date and save the output to a file called date.txt
+
+alias date='date "+%Y-%m-%d"'
+
+date > date.txt
+
+
+
+# Count the words in the text file and save the count to a file called textcount.txt
+
+wc -w myfile.txt > textcount.txt
+
+
+
+# Save the first five lines of a ps command to process.txt
+
+ps | head -n 5 > process.txt
+
+
+
+# Save the first five lines of ifconfig command to netstat.txt
+
+ifconfig | head -n 5 > netstat.txt
+
+
+
+# Save the first five lines of mount command to mount.txt
+
+mount | head -n 5 > mount.txt
+
+
+
+# Create a file called permissions.txt and give it rwx to all groups
+
+touch permissions.txt
+
+chmod a+rwx permissions.txt
+
+
+
+# Create a shell variable called TESTENV1 and set it to “test”
+
+TESTENV1="test"
+
+
+
+# Run a grep command for all words in the text file with at least 3 letters, save to a file called regex.txt
+
+grep -E '\b\w{3,}\b' myfile.txt > regex.txt
+
+
+
+# Navigate up a level - back to extra-credit
+
+cd ..
+
+
